@@ -1,0 +1,291 @@
+/* Callie brand layer: tokens, type, keyframes, bespoke chrome. */
+@import "@fontsource-variable/manrope";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+:root {
+  --paper: #fbf7f2;
+  --card: #ffffff;
+  --hairline: #ede6dd;
+  --ink: #122032;
+  --ink-soft: #51606f;
+  --blue: #2b5feb;
+  --blue-deep: #1e4ac7;
+  --honey: #a97b2f;
+  --honey-soft: #c9a05a;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.site {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site ::selection {
+  background: rgba(43, 95, 235, 0.16);
+}
+
+.font-mono-call {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.text-soft {
+  color: var(--ink-soft);
+}
+
+.eyebrow-honey {
+  color: var(--honey);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hairline-card {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+}
+
+/* ---------- bespoke CTAs (each intent has its own garment) ---------- */
+
+.cta-demo-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.cta-demo-nav:hover {
+  background: var(--blue);
+}
+.cta-demo-nav:active {
+  transform: scale(0.98);
+}
+
+.cta-demo-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.95rem 1.9rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  box-shadow:
+    inset 0 -2px 0 rgba(0, 0, 0, 0.14),
+    0 10px 24px -12px rgba(43, 95, 235, 0.55);
+  transition: box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.cta-demo-hero:hover {
+  background: var(--blue-deep);
+  box-shadow:
+    inset 0 -2px 0 rgba(0, 0, 0, 0.14),
+    0 16px 32px -12px rgba(43, 95, 235, 0.6);
+  transform: translateY(-1px);
+}
+.cta-demo-hero:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.cta-listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.95rem 0.4rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+.cta-listen:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.cta-demo-pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  font-weight: 800;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.cta-demo-pricing:hover {
+  background: var(--blue-deep);
+}
+.cta-demo-pricing:active {
+  transform: scale(0.99);
+}
+
+.cta-talk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1.5px solid var(--hairline);
+  color: var(--ink);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.cta-talk:hover {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.cta-demo-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  padding: 1rem 2.1rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 14px 30px -14px rgba(18, 32, 50, 0.55);
+}
+.cta-demo-final:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 38px -14px rgba(18, 32, 50, 0.6);
+}
+.cta-demo-final:active {
+  transform: translateY(0) scale(0.985);
+}
+
+/* ---------- motion ---------- */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+
+@keyframes bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bubble {
+  animation: bubble-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(220ms + var(--i, 0) * 260ms);
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--tilt, 0deg));
+  }
+  50% {
+    transform: translateY(-9px) rotate(var(--tilt, 0deg));
+  }
+}
+
+.drift-phrase {
+  color: var(--honey-soft);
+  font-style: italic;
+  font-weight: 600;
+  animation: drift 7s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -1.4s);
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-x 36s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+}
+
+.live-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+@keyframes wave-bar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.wave-bar {
+  transform-origin: center;
+  animation: wave-bar 0.9s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.12s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .bubble,
+  .drift-phrase,
+  .marquee-track,
+  .live-dot,
+  .wave-bar {
+    animation: none !important;
+  }
+  .site * {
+    transition-duration: 0.01ms !important;
+  }
+}
