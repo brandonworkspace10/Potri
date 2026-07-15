@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meetcallie.higgsfield.app/sitemap.xml
+Sitemap: https://meetpotri.higgsfield.app/sitemap.xml

@@ -1,11 +1,11 @@
-# Callie — design brief
+# Potri — design brief
 
 ## Design read
 For real estate wholesalers and investors drowning in unworked seller leads; the register is warm,
 personal and disarming: a calling assistant who introduces herself, not an "AI platform".
 
 ## Concept spine
-**"The site is Callie talking to you."** Every section is first person: she tells you what she does
+**"The site is Potri talking to you."** Every section is first person: she tells you what she does
 (calls, follows up, books), shows her own work artifacts (call cards, sequences, booked appointments),
 and closes by promising your morning calendar. Direct homage to lindy.ai at the user's explicit request;
 the Lindy homepage screenshots in `refs/` are the reference boards for this build.
@@ -31,13 +31,13 @@ timestamps and dial metadata. No serif anywhere.
 
 ## Tier-1 technique
 Self-composing conversation hero (mount-staggered message cascade in a device frame) + line-by-line
-call transcript player in section 5; both enact the spine: you watch Callie work in real time.
+call transcript player in section 5; both enact the spine: you watch Potri work in real time.
 
 ## Section plan (one layout family each)
 1. Nav: single line, cream, "Book a demo" pill.
 2. Hero: split 55/45, left intro copy, right phone frame with SMS thread; drifting task phrases behind.
 3. Tool strip: single-row marquee of REI tool wordmarks (pause on hover).
-4. Callie's work: 4 stacked full-width chapter cards (text + plate mockup, alternating sides, the
+4. Potri's work: 4 stacked full-width chapter cards (text + plate mockup, alternating sides, the
    4th a wide variant). Eyebrows live ONLY here (4 total = ceil(11 sections / 3)).
 5. Listen in: centered stage, transcript player card.
 6. How it works: 3 numbered divide-y rows, full width.
@@ -48,7 +48,7 @@ call transcript player in section 5; both enact the spine: you watch Callie work
 
 ## Asset plan
 - 3 generated gradient plates (amber / dawn blue / sage) behind mockups + final band. DONE (jobs queued).
-- Inline SVG logo family: "callie" wordmark + smiling handset monogram (favicon).
+- Inline SVG logo family: "potri" wordmark + smiling handset monogram (favicon).
 - Launch cover per app-cover.md (gpt_image_2, yellow phone character) -> og + marketplace. Queued.
 - Product artifacts (call cards, sequence timeline, booked slot) built as bespoke coded components,
   faithful to the reference's own coded-mockup style.

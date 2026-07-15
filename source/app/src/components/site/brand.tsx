@@ -1,6 +1,6 @@
 export const BOOK_URL = "https://calendly.com/realleadin/30min";
 
-export function CallieMark({ size = 30 }: { size?: number }) {
+export function PotriMark({ size = 30 }: { size?: number }) {
   return (
     <svg
       width={size}
@@ -34,24 +34,24 @@ export function CallieMark({ size = 30 }: { size?: number }) {
   );
 }
 
-export function CallieLockup({ size = 30 }: { size?: number }) {
+export function PotriLockup({ size = 30 }: { size?: number }) {
   return (
     <span className="inline-flex items-center gap-2.5">
-      <CallieMark size={size} />
+      <PotriMark size={size} />
       <span
         className="font-extrabold tracking-tight"
         style={{ fontSize: size * 0.72 }}
       >
-        callie
+        potri
       </span>
     </span>
   );
 }
 
-export function CallieChip({ label }: { label: string }) {
+export function PotriChip({ label }: { label: string }) {
   return (
     <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-[#E7EEFF] px-2.5 py-1 text-xs font-bold text-[#2B5FEB]">
-      <CallieMark size={14} />
+      <PotriMark size={14} />
       {label}
     </span>
   );

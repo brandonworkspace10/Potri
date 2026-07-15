@@ -1,4 +1,4 @@
-import { CallieChip, CallieMark, Container } from "./brand";
+import { PotriChip, PotriMark, Container } from "./brand";
 
 type Chapter = {
   eyebrow: string;
@@ -61,7 +61,7 @@ function ChapterCard({ chapter }: { chapter: Chapter }) {
           <p className="eyebrow-honey">{chapter.eyebrow}</p>
           <h2 className="flex items-start gap-3 text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
             <span className="mt-1 shrink-0">
-              <CallieMark size={26} />
+              <PotriMark size={26} />
             </span>
             {chapter.title}
           </h2>
@@ -111,7 +111,7 @@ function LiveCallMock() {
         dialing began 42s after lead came in
       </p>
       <div className="mt-3 flex justify-center">
-        <CallieChip label="Called by Callie" />
+        <PotriChip label="Called by Potri" />
       </div>
     </div>
   );
@@ -154,7 +154,7 @@ function SequenceMock() {
         ))}
       </ul>
       <div className="mt-3 flex justify-center">
-        <CallieChip label="Sequence by Callie" />
+        <PotriChip label="Sequence by Potri" />
       </div>
     </div>
   );
@@ -188,7 +188,7 @@ function BookedMock() {
         ))}
       </ul>
       <div className="mt-3 flex justify-center">
-        <CallieChip label="Booked by Callie" />
+        <PotriChip label="Booked by Potri" />
       </div>
     </div>
   );
@@ -208,7 +208,7 @@ function ReactivationCard() {
           <p className="eyebrow-honey">List reactivation</p>
           <h2 className="flex items-start gap-3 text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
             <span className="mt-1 shrink-0">
-              <CallieMark size={26} />
+              <PotriMark size={26} />
             </span>
             I wake up your dead lead list.
           </h2>
@@ -253,7 +253,7 @@ function ReactivationCard() {
               ))}
             </ul>
             <div className="mt-3 flex justify-center">
-              <CallieChip label="Revived by Callie" />
+              <PotriChip label="Revived by Potri" />
             </div>
           </div>
         </div>
