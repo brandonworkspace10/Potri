@@ -1,7 +1,9 @@
 /* Tropi brand layer: tokens, type, keyframes, bespoke chrome. */
 @import "@fontsource-variable/manrope";
-@import "@fontsource/ibm-plex-mono/400.css";
-@import "@fontsource/ibm-plex-mono/500.css";
+/* Latin-only mono subsets: the copy is English, so cyrillic / vietnamese /
+   latin-ext mono weights are never rendered and only bloat the deploy. */
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
 
 :root {
   --paper: #fbf7f2;
@@ -15,10 +17,43 @@
   --honey-soft: #c9a05a;
 }
 
+/* Cream canvas on the document itself so there is no white/dark flash before
+   the React tree paints, and no mismatched overscroll color. */
+html,
+body {
+  background: var(--paper);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* ---------- decorative gradient plates (replace ~3.2MB of PNGs) ----------
+   Soft multi-stop gradients that recreate the amber / dawn / sage photo
+   plates with zero network cost, zero decode, and no layout shift. They sit
+   behind the mockup cards, so only the framing hues need to match. */
+.plate {
+  background-color: var(--paper);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.plate-amber {
+  background-image:
+    radial-gradient(85% 78% at 62% -4%, #d1a058 0%, #ebce93 34%, rgba(235, 206, 147, 0) 68%),
+    linear-gradient(158deg, #f3eee0 0%, #fbf4e4 55%, #faf3e3 100%);
+}
+.plate-dawn {
+  background-image:
+    radial-gradient(78% 70% at 76% -6%, #c3e4f5 0%, rgba(198, 231, 246, 0) 60%),
+    radial-gradient(72% 62% at 28% 104%, #f3dfb8 0%, rgba(243, 223, 184, 0) 58%),
+    linear-gradient(180deg, #ddeff3 0%, #f6f7ee 46%, #f8ecd6 100%);
+}
+.plate-sage {
+  background-image:
+    radial-gradient(64% 58% at 50% 48%, #f8f1e1 0%, #e3e7d1 46%, rgba(227, 231, 209, 0) 76%),
+    linear-gradient(130deg, #8fa189 0%, #bccfb5 34%, #c8d9c4 64%, #96a78d 100%);
 }
 
 .site {

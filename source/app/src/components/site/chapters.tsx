@@ -14,14 +14,14 @@ const CHAPTERS: Chapter[] = [
     eyebrow: "Speed to lead",
     title: "I call every new lead in under 60 seconds.",
     body: "The moment a seller hits your website or drops in from a list pull, I'm dialing. You stay first in line while your competitors are still checking their CRM.",
-    plate: "/assets/plate-amber.png",
+    plate: "plate-amber",
     mock: <LiveCallMock />,
   },
   {
     eyebrow: "Follow-up",
     title: "I never let a seller lead go cold.",
     body: "Calls, texts and voicemails on a cadence that doesn't get tired or embarrassed. I keep touching every lead until they pick up or tell me to stop.",
-    plate: "/assets/plate-dawn.png",
+    plate: "plate-dawn",
     mock: <SequenceMock />,
     flip: true,
   },
@@ -29,7 +29,7 @@ const CHAPTERS: Chapter[] = [
     eyebrow: "Qualify and book",
     title: "I qualify sellers, and book them on your calendar.",
     body: "I ask about condition, timeline, motivation, price and occupancy, then put qualified sellers straight on your calendar with my notes attached.",
-    plate: "/assets/plate-sage.png",
+    plate: "plate-sage",
     mock: <BookedMock />,
   },
 ];
@@ -68,8 +68,7 @@ function ChapterCard({ chapter }: { chapter: Chapter }) {
           <p className="text-soft max-w-[52ch] leading-relaxed">{chapter.body}</p>
         </div>
         <div
-          className="relative flex min-h-[320px] items-center justify-center bg-cover bg-center p-8 lg:[direction:ltr]"
-          style={{ backgroundImage: `url(${chapter.plate})` }}
+          className={`plate ${chapter.plate} relative flex min-h-[320px] items-center justify-center p-8 lg:[direction:ltr]`}
         >
           {chapter.mock}
         </div>
@@ -217,10 +216,7 @@ function ReactivationCard() {
             through them and surface the sellers whose timing finally changed.
           </p>
         </div>
-        <div
-          className="relative flex min-h-[300px] items-center justify-center bg-cover bg-center p-8"
-          style={{ backgroundImage: "url(/assets/plate-amber.png)" }}
-        >
+        <div className="plate plate-amber relative flex min-h-[300px] items-center justify-center p-8">
           <div className="w-full max-w-[430px] rounded-2xl border border-white/60 bg-white/95 p-4 shadow-[0_18px_40px_-20px_rgba(18,32,50,0.35)]">
             <div className="flex items-center justify-between">
               <p className="text-sm font-bold">Aged leads · this week</p>

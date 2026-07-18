@@ -13,6 +13,7 @@ const TRANSCRIPT: { who: "tropi" | "maria"; text: string }[] = [
 export function ListenIn() {
   const [step, setStep] = useState(TRANSCRIPT.length);
   const started = useRef(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,16 +32,22 @@ export function ListenIn() {
         io.disconnect();
         setStep(1);
         let n = 1;
-        const t = setInterval(() => {
+        intervalRef.current = setInterval(() => {
           n += 1;
           setStep(n);
-          if (n >= TRANSCRIPT.length) clearInterval(t);
+          if (n >= TRANSCRIPT.length && intervalRef.current) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
+          }
         }, 1100);
       },
       { threshold: 0.4 },
     );
     io.observe(el);
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, []);
 
   return (
@@ -77,7 +84,7 @@ export function ListenIn() {
             {TRANSCRIPT.map((line, i) => (
               <li
                 key={i}
-                className="flex gap-3 transition-all duration-500"
+                className="flex gap-3 transition-[opacity,transform] duration-500"
                 style={{
                   opacity: i < step ? 1 : 0.15,
                   transform: i < step ? "translateY(0)" : "translateY(4px)",

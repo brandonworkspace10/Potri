@@ -226,11 +226,7 @@ export function Pricing() {
 export function FinalBand() {
   return (
     <section className="relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/assets/plate-amber.png)" }}
-        aria-hidden="true"
-      />
+      <div className="plate plate-amber absolute inset-0" aria-hidden="true" />
       <div className="absolute inset-0 bg-[#FBF7F2]/35" aria-hidden="true" />
       <Container className="relative flex flex-col items-center py-24 text-center md:py-32">
         <h2 className="max-w-[18ch] text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl">

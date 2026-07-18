@@ -8,7 +8,7 @@ const LINKS = [
 
 export function SiteNav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#EDE6DD] bg-[#FBF7F2]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#EDE6DD] bg-[#FBF7F2]/95">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 md:px-8">
         <a href="#top" className="flex items-center" aria-label="Tropi home">
           <TropiLockup size={30} />

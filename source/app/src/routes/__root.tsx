@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 import { button } from "@higgsfield/quanta/button";
 import { NotFound } from "@higgsfield/quanta/not-found";
 
-import appCss from "../styles.css?url";
+import appCss from "../site-entry.css?url";
 import siteCss from "../site.css?url";
 import { reportHiggsfieldError } from "../lib/higgsfield-error-reporting";
 // Page metadata (browser <title>/favicon + social og: tags) committed into the
@@ -163,14 +163,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-theme="default-dark" style={{ colorScheme: "dark" }}>
-      {/* Marketplace apps are permanently dark: data-theme is pinned on <html>
-          above. Do not add quanta's bootstrapScript/ThemeController, a theme
-          toggle, or a light mode. */}
+    <html lang="en" style={{ colorScheme: "light" }}>
+      {/* This is a light (cream) marketing site, not a Quanta dark-theme app.
+          The cream canvas is set on html/body in site.css so there is no dark
+          flash before the React tree paints. */}
       <head>
         <HeadContent />
       </head>
-      <body className="bg-q-background-primary text-q-text-primary">
+      <body>
         {children}
         <Scripts />
       </body>

@@ -1,0 +1,13 @@
+/* Slim Tailwind entry for the Tropi marketing site.
+ *
+ * The marketing page uses ONLY standard Tailwind utilities + the bespoke
+ * classes in site.css. It does NOT use the Quanta design system, its q-*
+ * component utilities, tw-animate-css, or the Inter / Space Grotesk / Geist
+ * font faces those bring in. Importing the full app stylesheet here shipped
+ * ~350KB of unused CSS and ~270KB of unused fonts to every visitor, so this
+ * entry pulls in vanilla Tailwind scoped to just the site sources instead. */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss" source(none);
+@source "./routes/index.tsx";
+@source "./components/site";
