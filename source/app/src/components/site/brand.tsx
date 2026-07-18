@@ -1,6 +1,6 @@
 export const BOOK_URL = "https://calendly.com/realleadin/30min";
 
-export function PotriMark({ size = 30 }: { size?: number }) {
+export function TropiMark({ size = 30 }: { size?: number }) {
   return (
     <svg
       width={size}
@@ -34,24 +34,24 @@ export function PotriMark({ size = 30 }: { size?: number }) {
   );
 }
 
-export function PotriLockup({ size = 30 }: { size?: number }) {
+export function TropiLockup({ size = 30 }: { size?: number }) {
   return (
     <span className="inline-flex items-center gap-2.5">
-      <PotriMark size={size} />
+      <TropiMark size={size} />
       <span
         className="font-extrabold tracking-tight"
         style={{ fontSize: size * 0.72 }}
       >
-        potri
+        tropi
       </span>
     </span>
   );
 }
 
-export function PotriChip({ label }: { label: string }) {
+export function TropiChip({ label }: { label: string }) {
   return (
     <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-[#E7EEFF] px-2.5 py-1 text-xs font-bold text-[#2B5FEB]">
-      <PotriMark size={14} />
+      <TropiMark size={14} />
       {label}
     </span>
   );

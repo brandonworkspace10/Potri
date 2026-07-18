@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { PotriMark, Container } from "./brand";
+import { TropiMark, Container } from "./brand";
 
-const TRANSCRIPT: { who: "potri" | "maria"; text: string }[] = [
-  { who: "potri", text: "Hi, is this Maria? This is Potri calling for Ridgeline Home Buyers, about the house on Alder Street." },
+const TRANSCRIPT: { who: "tropi" | "maria"; text: string }[] = [
+  { who: "tropi", text: "Hi, is this Maria? This is Tropi calling for Ridgeline Home Buyers, about the house on Alder Street." },
   { who: "maria", text: "Oh right, I filled out the form last week." },
-  { who: "potri", text: "You did. Are you still thinking about selling, or did I catch you past that?" },
+  { who: "tropi", text: "You did. Are you still thinking about selling, or did I catch you past that?" },
   { who: "maria", text: "No, we still want to sell. The roof needs work and we already moved out." },
-  { who: "potri", text: "That's exactly the kind of house we buy, so the roof is no problem. Would Thursday at 10:30 work for a walkthrough offer?" },
+  { who: "tropi", text: "That's exactly the kind of house we buy, so the roof is no problem. Would Thursday at 10:30 work for a walkthrough offer?" },
   { who: "maria", text: "Thursday works." },
 ];
 
@@ -60,7 +60,7 @@ export function ListenIn() {
         >
           <div className="flex items-center justify-between border-b border-[#F1EBE3] pb-4">
             <div className="flex items-center gap-3">
-              <PotriMark size={34} />
+              <TropiMark size={34} />
               <div className="leading-tight">
                 <p className="text-sm font-bold">Outbound call · Maria R.</p>
                 <p className="font-mono-call text-[11px] text-[#51606F]">
@@ -85,7 +85,7 @@ export function ListenIn() {
               >
                 <span
                   className={`font-mono-call mt-0.5 w-14 shrink-0 text-[11px] font-medium uppercase tracking-wide ${
-                    line.who === "potri" ? "text-[#2B5FEB]" : "text-[#A97B2F]"
+                    line.who === "tropi" ? "text-[#2B5FEB]" : "text-[#A97B2F]"
                   }`}
                 >
                   {line.who}

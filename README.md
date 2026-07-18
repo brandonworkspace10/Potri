@@ -1,7 +1,7 @@
-# Potri — AI callers for real estate
+# Tropi — AI callers for real estate
 
-Marketing site for **Potri**, outbound AI callers + follow-up systems for real estate
-investors and wholesalers. Styled after lindy.ai.
+Marketing site for **Tropi** (tropi.io), outbound AI callers + follow-up systems for
+real estate investors and wholesalers. Styled after lindy.ai.
 
 ## How this repo is laid out
 
@@ -27,8 +27,7 @@ Vercel redeploys on push to main.
 
 ## Notes
 
+- Canonical domain is **tropi.io** (sitemap, robots and the static renderer all point to it).
+  Add the domain to the Vercel project so it serves this deployment.
 - All "Book a demo" CTAs currently point to `calendly.com/realleadin/30min`.
-- The same site is also live on the Higgsfield builder at https://meetpotri.higgsfield.app.
-- `sitemap.xml` and `robots.txt` reference `meetpotri.higgsfield.app`; update them when a
-  custom domain is connected.
 - Social share image (og:image) and cover are hosted on CloudFront (see `source/app/src/app-meta.json`).
