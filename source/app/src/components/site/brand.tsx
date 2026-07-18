@@ -1,6 +1,6 @@
 export const BOOK_URL = "https://calendly.com/realleadin/30min";
 
-export function TropiMark({ size = 30 }: { size?: number }) {
+export function TopriMark({ size = 30 }: { size?: number }) {
   return (
     <svg
       width={size}
@@ -34,24 +34,24 @@ export function TropiMark({ size = 30 }: { size?: number }) {
   );
 }
 
-export function TropiLockup({ size = 30 }: { size?: number }) {
+export function TopriLockup({ size = 30 }: { size?: number }) {
   return (
     <span className="inline-flex items-center gap-2.5">
-      <TropiMark size={size} />
+      <TopriMark size={size} />
       <span
         className="font-extrabold tracking-tight"
         style={{ fontSize: size * 0.72 }}
       >
-        tropi
+        topri
       </span>
     </span>
   );
 }
 
-export function TropiChip({ label }: { label: string }) {
+export function TopriChip({ label }: { label: string }) {
   return (
     <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-[#E7EEFF] px-2.5 py-1 text-xs font-bold text-[#2B5FEB]">
-      <TropiMark size={14} />
+      <TopriMark size={14} />
       {label}
     </span>
   );

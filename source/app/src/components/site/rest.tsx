@@ -1,4 +1,4 @@
-import { BOOK_URL, TropiLockup, Container } from "./brand";
+import { BOOK_URL, TopriLockup, Container } from "./brand";
 
 /* ---------------- tool strip ---------------- */
 
@@ -174,7 +174,7 @@ export function Pricing() {
             <span className="absolute -top-3.5 left-7 rounded-full bg-[#2B5FEB] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-white">
               Founding rate
             </span>
-            <p className="text-sm font-bold">Tropi</p>
+            <p className="text-sm font-bold">Topri</p>
             <p className="mt-3 text-4xl font-extrabold tracking-tight">
               $997<span className="text-base font-semibold text-[#51606F]">/mo</span>
             </p>
@@ -257,7 +257,7 @@ export function SiteFooter() {
     <footer className="border-t border-[#EDE6DD] bg-[#FBF7F2]">
       <Container className="flex flex-col gap-8 py-12 md:flex-row md:items-start md:justify-between">
         <div>
-          <TropiLockup size={26} />
+          <TopriLockup size={26} />
           <p className="text-soft mt-3 max-w-[36ch] text-sm leading-relaxed">
             Outbound AI callers and follow-up systems for real estate
             investors and wholesalers.
@@ -287,7 +287,7 @@ export function SiteFooter() {
       <div className="border-t border-[#EDE6DD] py-5">
         <Container>
           <p className="font-mono-call text-xs text-[#51606F]">
-            © 2026 Tropi. Calls are recorded and made within legal calling
+            © 2026 Topri. Calls are recorded and made within legal calling
             hours.
           </p>
         </Container>

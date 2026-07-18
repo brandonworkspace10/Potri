@@ -1,4 +1,4 @@
-import { TropiChip, TropiMark, Container } from "./brand";
+import { TopriChip, TopriMark, Container } from "./brand";
 
 type Chapter = {
   eyebrow: string;
@@ -61,7 +61,7 @@ function ChapterCard({ chapter }: { chapter: Chapter }) {
           <p className="eyebrow-honey">{chapter.eyebrow}</p>
           <h2 className="flex items-start gap-3 text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
             <span className="mt-1 shrink-0">
-              <TropiMark size={26} />
+              <TopriMark size={26} />
             </span>
             {chapter.title}
           </h2>
@@ -110,7 +110,7 @@ function LiveCallMock() {
         dialing began 42s after lead came in
       </p>
       <div className="mt-3 flex justify-center">
-        <TropiChip label="Called by Tropi" />
+        <TopriChip label="Called by Topri" />
       </div>
     </div>
   );
@@ -153,7 +153,7 @@ function SequenceMock() {
         ))}
       </ul>
       <div className="mt-3 flex justify-center">
-        <TropiChip label="Sequence by Tropi" />
+        <TopriChip label="Sequence by Topri" />
       </div>
     </div>
   );
@@ -187,7 +187,7 @@ function BookedMock() {
         ))}
       </ul>
       <div className="mt-3 flex justify-center">
-        <TropiChip label="Booked by Tropi" />
+        <TopriChip label="Booked by Topri" />
       </div>
     </div>
   );
@@ -207,7 +207,7 @@ function ReactivationCard() {
           <p className="eyebrow-honey">List reactivation</p>
           <h2 className="flex items-start gap-3 text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
             <span className="mt-1 shrink-0">
-              <TropiMark size={26} />
+              <TopriMark size={26} />
             </span>
             I wake up your dead lead list.
           </h2>
@@ -249,7 +249,7 @@ function ReactivationCard() {
               ))}
             </ul>
             <div className="mt-3 flex justify-center">
-              <TropiChip label="Revived by Tropi" />
+              <TopriChip label="Revived by Topri" />
             </div>
           </div>
         </div>

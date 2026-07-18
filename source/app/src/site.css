@@ -1,4 +1,4 @@
-/* Tropi brand layer: tokens, type, keyframes, bespoke chrome. */
+/* Topri brand layer: tokens, type, keyframes, bespoke chrome. */
 @import "@fontsource-variable/manrope";
 /* Latin-only mono subsets: the copy is English, so cyrillic / vietnamese /
    latin-ext mono weights are never rendered and only bloat the deploy. */

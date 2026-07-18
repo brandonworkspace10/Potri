@@ -1,4 +1,4 @@
-import { BOOK_URL, TropiMark } from "./brand";
+import { BOOK_URL, TopriMark } from "./brand";
 
 const DRIFT_PHRASES: {
   text: string;
@@ -12,15 +12,15 @@ const DRIFT_PHRASES: {
   { text: "work the probate list", className: "right-[7%] bottom-[12%]", tilt: "-3deg", i: 3 },
 ];
 
-const SMS_THREAD: { from: "tropi" | "lead"; text: string; i: number }[] = [
+const SMS_THREAD: { from: "topri" | "lead"; text: string; i: number }[] = [
   {
-    from: "tropi",
-    text: "Hi Maria, it's Tropi with Ridgeline Home Buyers. You asked about a cash offer for 412 Alder St. Still a good time for a quick call?",
+    from: "topri",
+    text: "Hi Maria, it's Topri with Ridgeline Home Buyers. You asked about a cash offer for 412 Alder St. Still a good time for a quick call?",
     i: 0,
   },
   { from: "lead", text: "Yes but I'm at work until 5", i: 1 },
   {
-    from: "tropi",
+    from: "topri",
     text: "No problem. I'll call you at 5:15. If the condition checks out, you could have an offer this week.",
     i: 2,
   },
@@ -50,7 +50,7 @@ export function Hero() {
             className="rise text-5xl font-extrabold leading-none tracking-tighter md:text-7xl"
             style={{ "--i": 0 } as React.CSSProperties}
           >
-            hey, I'm <span className="text-[#A97B2F]">Tropi.</span>
+            hey, I'm <span className="text-[#A97B2F]">Topri.</span>
           </h1>
           <p
             className="rise text-soft mt-6 max-w-[46ch] text-lg leading-relaxed md:text-xl"
@@ -111,7 +111,7 @@ function PhoneThread() {
               <div
                 key={m.i}
                 className={`bubble max-w-[85%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-snug ${
-                  m.from === "tropi"
+                  m.from === "topri"
                     ? "self-end rounded-br-md bg-[#2B5FEB] text-white"
                     : "self-start rounded-bl-md bg-[#EEE8E0] text-[#122032]"
                 }`}
@@ -124,7 +124,7 @@ function PhoneThread() {
               className="bubble mt-2 flex items-center gap-2 self-center rounded-full border border-[#EDE6DD] bg-white px-3 py-1.5"
               style={{ "--i": 3.2 } as React.CSSProperties}
             >
-              <TropiMark size={14} />
+              <TopriMark size={14} />
               <span className="font-mono-call text-[11px] font-medium text-[#51606F]">
                 call scheduled 5:15 PM · on your calendar
               </span>

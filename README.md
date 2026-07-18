@@ -1,6 +1,6 @@
-# Tropi — AI callers for real estate
+# Topri — AI callers for real estate
 
-Marketing site for **Tropi** (tropi.io), outbound AI callers + follow-up systems for
+Marketing site for **Topri** (topri.io), outbound AI callers + follow-up systems for
 real estate investors and wholesalers. Styled after lindy.ai.
 
 ## How this repo is laid out
@@ -27,7 +27,7 @@ Vercel redeploys on push to main.
 
 ## Notes
 
-- Canonical domain is **tropi.io** (sitemap, robots and the static renderer all point to it).
+- Canonical domain is **topri.io** (sitemap, robots and the static renderer all point to it).
   Add the domain to the Vercel project so it serves this deployment.
 - All "Book a demo" CTAs currently point to `calendly.com/realleadin/30min`.
 - Social share image (og:image) and cover are hosted on CloudFront (see `source/app/src/app-meta.json`).

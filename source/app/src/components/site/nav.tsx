@@ -1,4 +1,4 @@
-import { BOOK_URL, TropiLockup } from "./brand";
+import { BOOK_URL, TopriLockup } from "./brand";
 
 const LINKS = [
   { href: "#work", label: "What I do" },
@@ -10,8 +10,8 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#EDE6DD] bg-[#FBF7F2]/95">
       <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 md:px-8">
-        <a href="#top" className="flex items-center" aria-label="Tropi home">
-          <TropiLockup size={30} />
+        <a href="#top" className="flex items-center" aria-label="Topri home">
+          <TopriLockup size={30} />
         </a>
         <div className="hidden items-center gap-7 md:flex">
           {LINKS.map((l) => (
